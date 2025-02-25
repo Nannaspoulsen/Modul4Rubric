@@ -1,4 +1,4 @@
-// En liste med urter (objekter), der indeholder navn, beskrivelse og billede
+// Et array med urter (objekter), der indeholder navn, beskrivelse og billede
 const urter = [
   {
     navn: "Kamille",
@@ -56,15 +56,15 @@ const urter = [
 const herbContainer = document.querySelector("#herb-container");
 
 // Gennemgår hver eneste urt fra min liste i toppen. ForEach = for hver! Så for hver urt, skal der ske noget.
-urter.forEach((urt) => {
+urter.forEach(function(urt) {
 
-// Hver lille "herbDiv"-boks fyldes med indhold: navn og billedet af urten. 
+// Hver lille "herbDiv"-boks fyldes med indhold, navn og billedet af urten. 
   const herbDiv = document.createElement("div");
   herbDiv.innerHTML = `<img src="${urt.billede}" alt="${urt.navn}" />
       <h3>${urt.navn}</h3>`;
 
   // Når bruger klikker på urteboks, skal der ske noget!
-  herbDiv.addEventListener("click", function () {
+  herbDiv.addEventListener("click", function(e) {
     showPopup(urt); // Kalder showPopup funktion, der viser popup med urtens detaljer
   });
 
@@ -78,16 +78,16 @@ function showPopup(urt) {
   document.querySelector("#popup").style.display = "flex";
 
   // Sætter urtens navn ind i popup
-  document.querySelector("#popup-name").textContent = urt.navn;
+  document.querySelector("#popup-navn").textContent = urt.navn;
 
   // Sætter urtens billede ind i popup
-  document.querySelector("#popup-image").src = urt.billede;
+  document.querySelector("#popup-billede").src = urt.billede;
 
   // Sætter beskrivelsen af urten ind i popup
-  document.querySelector("#popup-description").textContent = urt.beskrivelse;
+  document.querySelector("#popup-beskrivelse").textContent = urt.beskrivelse;
 }
 // Luk popup når man klikker på krydset
-document.querySelector("#popup-close").addEventListener("click", function () {
+document.querySelector("#popup-luk").addEventListener("click", function () {
   // Skjul popup ved at ændre til display none
   document.querySelector("#popup").style.display = "none";
 });

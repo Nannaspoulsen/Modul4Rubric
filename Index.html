@@ -14,12 +14,15 @@
     <h1>MEDICINSKE URTER</h1>
   </header>
   <div id="herb-container"></div>
+  <!-- Jeg har givet popup både et id og en class, fordi de har forskellige formål. 
+       - Id gør det nemt at fange popup'en i JavaScript for at vise og skjule den. Class bruges til at style popup'en i CSS. -->
   <div id="popup" class="popup">
-    <div class="popup-content">
-      <span id="popup-close" class="popup-close">&times;</span>
-      <img id="popup-image" alt="Herb Image" />
-      <h3 id="popup-name"></h3>
-      <p id="popup-description"></p>
+    <div class="popup-indhold">
+      <!-- Fandt noget nyt på w3schools! Entities! Mega smart og nemt at bruge sammenlignet med ikoner -->
+       <span id="popup-luk" class="popup-luk">&times;</span>
+      <img id="popup-billede" alt="Billede af urt" />
+      <h3 id="popup-navn"></h3>
+      <p id="popup-beskrivelse"></p>
     </div>
   </div>
 </body>
