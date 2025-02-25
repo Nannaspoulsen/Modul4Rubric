@@ -1,4 +1,4 @@
-// En liste med urter, der indeholder navn, beskrivelse og billede
+// En liste med urter (objekter), der indeholder navn, beskrivelse og billede
 const urter = [
   {
     navn: "Kamille",
@@ -12,8 +12,7 @@ const urter = [
   },
   {
     navn: "Lavendel",
-    beskrivelse:
-      "Har antiinflammatoriske egenskaber og styrker immunforsvaret.",
+    beskrivelse: "Har antiinflammatoriske egenskaber og styrker immunforsvaret.",
     billede: "./assets/img/pexels-leah-newhouse-50725-3085106.jpg",
   },
   {
